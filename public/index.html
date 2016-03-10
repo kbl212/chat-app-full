@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
+
+<head>
     <title>Chat with socket.io and node.js</title>
-    <link type="text/css" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
+</head>
+
 <body>
 
-    <div id="chat"></div>
-        <form id="send-messages">
-            <input id="message"></input>
-            <input type="submit"></input>
-        </form>
+    <div id="chat" ng-model="fullChat">blah</div>
+    <form id="send-messages" ng-submit="messageSubmit()">
+        <input id="message" ng-model="currMessage"></input>
+        <input type="submit"></input>
+    </form>
 
     <span>HELLO THERE</span>
 

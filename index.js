@@ -11,3 +11,11 @@ app.get('/', function(req,res) {
     res.sendfile(__dirname + '/index.html'); //maybe change this to app.use(express...etc);
 })
 */
+
+io.sockets.on('connection', function(socket) {
+    socket.emit('welcome', { message: 'Welcome!'});
+    socket.on('send message', function(data) {
+        io.sockets.emit('receive message', data);
+        //sockets.broadcast.emit, sends to everyone EXCEPT me...
+    })
+})
