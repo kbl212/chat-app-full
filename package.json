@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/kbl212/chat-app-full/issues"
   },
-  "homepage": "https://github.com/kbl212/chat-app-full#readme"
+  "homepage": "https://github.com/kbl212/chat-app-full#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
 }
