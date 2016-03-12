@@ -16,6 +16,7 @@ io.sockets.on('connection', function(socket) {
     socket.emit('welcome', { message: 'Welcome!'});
     socket.on('send message', function(data) {
         io.sockets.emit('receive message', data);
+        console.log("on send message...");
         //sockets.broadcast.emit, sends to everyone EXCEPT me...
     })
 })
