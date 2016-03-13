@@ -13,10 +13,10 @@ app.get('/', function(req,res) {
 */
 
 io.sockets.on('connection', function(socket) {
-    socket.emit('welcome', { message: 'Welcome!'});
     socket.on('send message', function(data) {
-        io.sockets.emit('receive message', data);
+        io.sockets.emit('new message', data);
         console.log("on send message...");
+        //sockets.broadcast.emit('new message', data);
         //sockets.broadcast.emit, sends to everyone EXCEPT me...
     })
 })
