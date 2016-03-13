@@ -7,17 +7,27 @@
 </head>
 
 <body>
-    <div ng-controller="chatCtrl">
-        <div id="chat">
-            <p>START...{{fullChat}}</p>
-        </div>
-        <form id="send-messages" ng-submit="messageSubmit()">
-            <input id="message" ng-model="currMessage"></input>
-            <input type="submit"></input>
-        </form>
+    <div class="container">
+        <div ng-controller="chatCtrl">
+            <div id="chat">
+                <p ng-repeat="message in allChatMessages track by $index">{{message}}</br></p>
+            </div>
+            <form id="send-messages" ng-submit="messageSubmit()">
+                <input id="message" ng-model="currMessage"></input>
+                <input type="submit"></input>
+            </form>
 
-        <span>HELLO THERE</span>
+            <span>HELLO THERE</span>
+        </div>
     </div>
+
+
+
+
+
+
+
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
