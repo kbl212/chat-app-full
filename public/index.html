@@ -14,7 +14,7 @@
                 </p>
             </div>
             <div id="new-message-container">
-                <form id="send-messages" ng-submit="messageSubmit()">
+                <form id="send-messages" ng-submit="messageSubmit(currMessage)">
                     <input id="message" ng-model="currMessage"></input>
                     <input type="submit"></input>
                 </form>
