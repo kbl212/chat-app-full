@@ -58,6 +58,8 @@ html {
     background-color: red;
     font-size: 36px;
     overflow: auto;
+    margin-left: 50px;
+    padding-left: 50px;
 }
 
 .container {

@@ -3,6 +3,7 @@ var express = require('express'),
     server = require('http').createServer(app),
     io = require('socket.io').listen(server);
 
+var port = 3000 || process.env.PORT;
 server.listen(3000);
 
 app.use(express.static(__dirname + '/public'));
@@ -15,7 +16,6 @@ app.get('/', function(req,res) {
 io.sockets.on('connection', function(socket) {
     socket.on('send message', function(data) {
         io.sockets.emit('new message', data);
-        console.log("on send message...");
         //sockets.broadcast.emit('new message', data);
         //sockets.broadcast.emit, sends to everyone EXCEPT me...
     })
