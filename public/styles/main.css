@@ -58,13 +58,16 @@ html {
     background-color: red;
     font-size: 18px;
     overflow-y: auto;
-    padding-left: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
     margin-top: 50px;
     line-height: 25px;
 }
 
 .chat-msg {
     width: 350px;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -73,11 +76,12 @@ html {
 }
 
 #new-message-container {
-    width: 400px;
+    width: 520px;
     height: 100px;
     position: relative;
     background-color: black;
     color: #fff;
+    padding-top: 10px;
 }
 
 #send-messages {
@@ -89,4 +93,18 @@ html {
 
 input {
     height: 30px;
+}
+
+#userName {
+    margin-left: 35px;
+}
+
+.self-msg {
+    background-color: cyan;
+    float:right;
+}
+
+.other-msg {
+    background-color: lightgray;
+    float:left;
 }

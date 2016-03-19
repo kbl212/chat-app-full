@@ -10,7 +10,7 @@
     <div class="container">
         <div ng-controller="chatCtrl">
             <div id="chat">
-                <p class="chat-msg" ng-repeat="message in allChatMessages track by $index">{{message.userName}}({{message.time}}): {{message.content}}
+                <p class="chat-msg" ng-repeat="message in allChatMessages track by $index" ng-class="message.owner">{{message.userName}}({{message.time}}): {{message.content}}
                 </br>
                 </p>
             </div>

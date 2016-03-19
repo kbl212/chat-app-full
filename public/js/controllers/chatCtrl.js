@@ -5,6 +5,7 @@ app.controller('chatCtrl', function($scope, chatService){
     $scope.allChatMessages = [];
     $scope.socket = io.connect();
     $scope.userName = "Anonymous";
+    
    // $scope.fullChatDiv = "";
     
     $scope.messageSubmit = function() {
@@ -37,11 +38,20 @@ app.controller('chatCtrl', function($scope, chatService){
 
         var currTime = hours + ":" + minutes + ":" + seconds + " " + amPM;
         
+        if (data.userName === $scope.userName)
+            $scope.messageOwner = "self-msg";
+        else
+            $scope.messageOwner = "other-msg";
+        
+        
+        var messageOwner = "Other";
         var messageObj = {
             userName: data.userName,
             content: data.message,
-            time: currTime
+            time: currTime,
+            owner: $scope.messageOwner
         }
+
         $scope.allChatMessages.push(messageObj);
         $scope.$apply();
         console.log("FullChat:  ", $scope.allChatMessages);
