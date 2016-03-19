@@ -10,13 +10,14 @@
     <div class="container">
         <div ng-controller="chatCtrl">
             <div id="chat">
-                <p ng-repeat="message in allChatMessages track by $index">{{message}}
+                <p class="chat-msg" ng-repeat="message in allChatMessages track by $index">{{message.userName}}({{message.time}}): {{message.content}}
                 </br>
                 </p>
             </div>
             <div id="new-message-container">
+                <input placeholder="Anonymous" id="userName" ng-model="userName"></input>
                 <form id="send-messages" ng-submit="messageSubmit()">
-                    <input id="message" ng-model="currMessage"></input>
+                    <input id="message" ng-model="currMessage" autofocus></input>
                     <input type="submit"></input>
                 </form>
             </div>

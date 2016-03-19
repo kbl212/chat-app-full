@@ -54,12 +54,17 @@ html {
 
 #chat {
     height: 400px;
-    width: 400px;
+    width: 500px;
     background-color: red;
-    font-size: 36px;
-    overflow: auto;
-    margin-left: 50px;
+    font-size: 18px;
+    overflow-y: auto;
     padding-left: 50px;
+    margin-top: 50px;
+    line-height: 25px;
+}
+
+.chat-msg {
+    width: 350px;
 }
 
 .container {
@@ -68,7 +73,7 @@ html {
 }
 
 #new-message-container {
-    width: 500px;
+    width: 400px;
     height: 100px;
     position: relative;
     background-color: black;
@@ -80,4 +85,8 @@ html {
     position: absolute;
     top: 50%;
     width: 300px;
+}
+
+input {
+    height: 30px;
 }
